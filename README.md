@@ -1,14 +1,14 @@
 This repository contains automated UI tests for a flight booking website using Playwright with Python.
 Overview
 
-###Requirements
+Requirements
 
 Python 3.8+
 Playwright for Python
 pytest
 coverage.py
 
-###Installation
+Installation
 
 Clone the repository:
 bashgit clone https://gitlab.com/your-username/Playwright-pytest.git
@@ -45,7 +45,7 @@ Generate an HTML report:
 'coverage html'
 The HTML report will be available in the htmlcov directory.
 
-###Coverage Configuration
+Coverage Configuration
 Coverage settings are configured in the .coveragerc file:
 ini[run]
 source = src
@@ -59,17 +59,17 @@ exclude_lines =
     pragma: no cover
     def __repr__
     raise NotImplementedError
-###CI/CD Integration
+CI/CD Integration
 This project is configured to run in GitLab CI/CD pipelines. The configuration can be found in the .gitlab-ci.yml file.
 Local Pipeline Simulation
 To simulate the GitLab CI pipeline locally:
 
-###Install GitLab Runner:
+Install GitLab Runner:
 bash# Linux
 sudo curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64"
 sudo chmod +x /usr/local/bin/gitlab-runner
 
-## macOS
+ macOS
 brew install gitlab-runner
 
 Run the pipeline job locally:
@@ -93,7 +93,7 @@ Best Practices
 - Run tests regularly on different browsers
 - Monitor code coverage and aim for >80% coverage
 
-###Troubleshooting
+Troubleshooting
 
 Browser not opening: Make sure to use the --headed flag when running pytest
 Element not found: Check if selectors need to be updated due to website changes
