@@ -1,5 +1,4 @@
-Air Canada Flight Booking Test Suite
-This repository contains automated UI tests for the Air Canada flight booking website using Playwright with Python.
+This repository contains automated UI tests for a flight booking website using Playwright with Python.
 Overview
 The test suite verifies the end-to-end functionality of the Air Canada flight booking process, including:
 
