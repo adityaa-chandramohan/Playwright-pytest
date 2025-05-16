@@ -1,21 +1,14 @@
 This repository contains automated UI tests for a flight booking website using Playwright with Python.
 Overview
-The test suite verifies the end-to-end functionality of the Air Canada flight booking process, including:
 
-Flight search functionality
-Date selection
-Origin and destination input
-Redirect validation
-Form submission
-
-Requirements
+###Requirements
 
 Python 3.8+
 Playwright for Python
 pytest
 coverage.py
 
-Installation
+###Installation
 
 Clone the repository:
 bashgit clone https://gitlab.com/your-username/Playwright-pytest.git
@@ -26,36 +19,33 @@ bashpython -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 Install dependencies:
-bashpip install -r requirements.txt
+'pip install -r requirements.txt'
 
 Install Playwright browsers:
-bashplaywright install
+'playwright install'
 
+'pytest test_air_canada.py'
 
-Running Tests
-Run all tests
-bashpytest
-Run with verbose output
-bashpytest -v
-Run a specific test file
-bashpytest test_air_canada.py
 Run with visible browser (non-headless)
-bashpytest --headed
+
+'pytest --headed'
+
 Test Coverage
+
 We use coverage.py to track and report code coverage metrics for our test suite.
 Generating Coverage Reports
 
 Run tests with coverage:
-bashcoverage run -m pytest
+'coverage run -m pytest'
 
 Generate a console report:
-bashcoverage report
+'coverage report'
 
 Generate an HTML report:
-bashcoverage html
+'coverage html'
 The HTML report will be available in the htmlcov directory.
 
-Coverage Configuration
+###Coverage Configuration
 Coverage settings are configured in the .coveragerc file:
 ini[run]
 source = src
@@ -69,17 +59,17 @@ exclude_lines =
     pragma: no cover
     def __repr__
     raise NotImplementedError
-CI/CD Integration
+###CI/CD Integration
 This project is configured to run in GitLab CI/CD pipelines. The configuration can be found in the .gitlab-ci.yml file.
 Local Pipeline Simulation
 To simulate the GitLab CI pipeline locally:
 
-Install GitLab Runner:
+###Install GitLab Runner:
 bash# Linux
 sudo curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64"
 sudo chmod +x /usr/local/bin/gitlab-runner
 
-# macOS
+## macOS
 brew install gitlab-runner
 
 Run the pipeline job locally:
@@ -97,13 +87,13 @@ Project Structure
 └── README.md               # This file
 Best Practices
 
-Keep tests atomic and independent
-Use descriptive test names
-Maintain fixtures for common setup/teardown
-Run tests regularly on different browsers
-Monitor code coverage and aim for >80% coverage
+- Keep tests atomic and independent
+- Use descriptive test names
+- Maintain fixtures for common setup/teardown
+- Run tests regularly on different browsers
+- Monitor code coverage and aim for >80% coverage
 
-Troubleshooting
+###Troubleshooting
 
 Browser not opening: Make sure to use the --headed flag when running pytest
 Element not found: Check if selectors need to be updated due to website changes
